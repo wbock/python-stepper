@@ -13,7 +13,10 @@ import RPi.GPIO as gpio #https://pypi.python.org/pypi/RPi.GPIO
 class stepper():
         steps = 0
         dir = 'right'
-        speed = 0.1
+		#default wait-time between steps:
+		#use 0.001 for Raspberry Pi 3
+		#use 0.1 for Jetson Nano
+        speed = 0.001
         stayOn = False
         pins = []
 
